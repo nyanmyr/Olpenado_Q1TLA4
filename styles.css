@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('sp.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    color: white;
+    background: linear-gradient(to bottom, #fff, #af0707);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sun {
+    top: 35vh;
+    position: relative;
+    left: 45vw;
+    animation: sunMove 10s ease-in-out infinite;
+}
+
+@keyframes sunMove {
+    0% {
+        scale: 250%;
+    }
+    50% {
+        scale: 750%;
+    }
+    100% {
+        scale: 250%;
+    }
+}
+
+.planet {
+    top: 35vh;
+    position: relative;
+    left: -40vw;
+    animation: planetMove 15s ease-in-out infinite;
+}
+
+@keyframes planetMove {
+    0% {
+        transform: translate(-15vw, 0vh);
+        transform: skew(-10deg); 
+    }
+    50% {
+        transform: translate(150vw, 0vh);
+
+    }
+    100% {
+        transform: translate(-15vw, 0vh);
+        transform: skew(10deg); 
+    }
+}
+
+.ufo {
+    top: 25vh;
+    position: relative;
+    animation: ufoMove 15s ease-in-out infinite;
+}
+
+@keyframes ufoMove {
+    0% {
+        transform: skew(0deg); 
+        transform: translate(-25vh, -25vw);
+    }
+    50% {
+        transform: skew(25deg); 
+        transform: translate(100vh, 100vw);
+    }
+    100% {
+        transform: skew(0deg);  
+        transform: translate(-25vh, -25vw);
+    }
+}
+
+.asteroid {
+    position: relative;
+    animation: asteroidMove 5s linear infinite;
+}
+
+@keyframes asteroidMove {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+}
